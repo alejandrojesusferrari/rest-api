@@ -1,0 +1,182 @@
+{
+	"info": {
+		"_postman_id": "ca7c4acf-d1df-4cc0-bea2-f4a3a5fc6aa1",
+		"name": "AA-Api-REST",
+		"schema": "https://schema.getpostman.com/json/collection/v2.1.0/collection.json"
+	},
+	"item": [
+		{
+			"name": "/user/login",
+			"request": {
+				"method": "POST",
+				"header": [
+					{
+						"key": "user",
+						"value": "usr",
+						"type": "text",
+						"disabled": true
+					},
+					{
+						"key": "password",
+						"value": "pwd",
+						"type": "text",
+						"disabled": true
+					}
+				],
+				"body": {
+					"mode": "urlencoded",
+					"urlencoded": [
+						{
+							"key": "user",
+							"value": "usr",
+							"type": "text"
+						},
+						{
+							"key": "password",
+							"value": "pwd",
+							"type": "text"
+						}
+					],
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "http://localhost:8080/user/login",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "8080",
+					"path": [
+						"user",
+						"login"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "/user/sighin",
+			"request": {
+				"method": "POST",
+				"header": [],
+				"body": {
+					"mode": "urlencoded",
+					"urlencoded": [
+						{
+							"key": "user",
+							"value": "usr",
+							"type": "text"
+						},
+						{
+							"key": "password",
+							"value": "pwd",
+							"type": "text"
+						}
+					],
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "http://localhost:8080/user/signin",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "8080",
+					"path": [
+						"user",
+						"signin"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "ad/create-ad",
+			"request": {
+				"method": "POST",
+				"header": [
+					{
+						"key": "Authorization",
+						"value": "Bearer eyJhbGciOiJIUzUxMiJ9.eyJqdGkiOiJzb2Z0dGVrSldUIiwic3ViIjoidXNyIiwiYXV0aG9yaXRpZXMiOlsiUk9MRV9VU0VSIl0sImlhdCI6MTYxMDk4MDEzNywiZXhwIjoxNjEwOTgwNzM3fQ.ZwPNJKsllHcKvkZmjCrIj6pmct33iX6ukEiH8Y34gsJ6RknwHTfZY0GPdqPc9mJwN-OwVetN-hLPTbTM07mPnQ",
+						"type": "text"
+					}
+				],
+				"body": {
+					"mode": "raw",
+					"raw": "{\n  \"title\": \"Ad001\",\n  \"description\": \"Some description 001\",\n  \"price\": 10.5,\n  \"totalAmount\": 1000,\n  \"consumedAmount\": 0,\n  \"startDate\": \"2021-01-01T00:00:00Z\",\n  \"endDate\": \"2020-01-29T00:00:00Z\",\n  \"ages\": [\n    {\n       \"idAge\":2\n    },\n    {\n       \"idAge\":3\n    },\n    {\n       \"idAge\":4\n    }\n  ],\n  \"coountry\": [\n    {\n       \"idcoountry\":2\n    }\n  ],\n  \"genders\": [\n    {\n       \"idGender\":1\n    },\n    {\n       \"idGender\":2\n    }\n  ]\n}",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "http://localhost:8080/ad/create-ad",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "8080",
+					"path": [
+						"ad",
+						"create-ad"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "publicator/publicate-ads",
+			"protocolProfileBehavior": {
+				"disableBodyPruning": true
+			},
+			"request": {
+				"method": "GET",
+				"header": [
+					{
+						"key": "Authorization",
+						"value": "Bearer eyJhbGciOiJIUzUxMiJ9.eyJqdGkiOiJzb2Z0dGVrSldUIiwic3ViIjoidXNyIiwiYXV0aG9yaXRpZXMiOlsiUk9MRV9VU0VSIl0sImlhdCI6MTYxMDczMjE1NSwiZXhwIjoxNjEwNzMyNzU1fQ.myFUWTRzebLxDGJCzuUwJTp3F6t7VCyF5gyJSIlWN-x4OSYNveFjRFGlIcnnVoXCO1_MUtm3HlnSAS8Vcis3xw",
+						"type": "text",
+						"disabled": true
+					},
+					{
+						"key": "UserId",
+						"value": "1",
+						"type": "text"
+					}
+				],
+				"body": {
+					"mode": "raw",
+					"raw": "",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "http://localhost:8080/publicator/publicate-ads",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "8080",
+					"path": [
+						"publicator",
+						"publicate-ads"
+					]
+				}
+			},
+			"response": []
+		}
+	],
+	"protocolProfileBehavior": {}
+}
